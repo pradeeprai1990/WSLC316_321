@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Course from './pages/Course'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Product from './pages/Product'
+import ProductDetails from './pages/ProductDetails'
 
 let allRouter=createBrowserRouter(
   [
@@ -19,6 +21,14 @@ let allRouter=createBrowserRouter(
     {
       path:'/course', //http://localhost:5173/course
       element:<Course/>
+    },
+    {
+      path:'/product', //http://localhost:5173/course
+      element:<Product/>
+    },
+    {
+      path:'/product-details/:pid', //http://localhost:5173/course
+      element:<ProductDetails/>
     }
   ]
 )
