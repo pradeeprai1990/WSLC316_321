@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 export default function Product() {
   return (
     <div>
-        <Header/>
+       
         <div className='max-w-[1320px] mx-auto py-5'>
              <h1 className='text-3xl font-bold'>Our Product</h1>
              
@@ -26,7 +26,7 @@ export default function Product() {
              </div>
         </div>
        
-        <Footer/>
+      
     </div>
   )
 }

@@ -12,7 +12,7 @@ export default function ProductDetails() {
   
   return (
     <div>
-        <Header/>
+     
         <div className='max-w-[1320px] mx-auto py-5'>
             <h1 className='text-3xl font-bold'>
                 {singleProductDetails.title}
@@ -31,7 +31,7 @@ export default function ProductDetails() {
                 </div>
              </div>
              </div>
-        <Footer/>
+       
     </div>
   )
 }
