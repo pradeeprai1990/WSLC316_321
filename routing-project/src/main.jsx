@@ -4,7 +4,7 @@ import './index.css'
 import Home from './pages/Home'
 import About from './pages/About'
 import Course from './pages/Course'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
 import Product from './pages/Product'
 import ProductDetails from './pages/ProductDetails'
 import Rootlayout from './Rootlayout'
@@ -57,6 +57,18 @@ let allRouter=createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={allRouter} />
+    
+      {/* <BrowserRouter>
+            <Routes>
+              <Route path='/login' element={<Login/>}/>
+              <Route path="/" element={<Rootlayout />}>
+                  <Route path='/' element={<Home/>} />
+                  <Route path='/course' element={<Course/>} />
+              </Route>
+           </Routes>
+      </BrowserRouter> */}
+
+
+     <RouterProvider router={allRouter} />
   </StrictMode>,
 )

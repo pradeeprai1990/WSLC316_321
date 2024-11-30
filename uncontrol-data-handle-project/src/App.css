@@ -1,0 +1,20 @@
+
+
+.imageOuter{
+  width: 600px;
+  margin: auto;
+}
+.imageOuter>img{
+  width: 100%;
+}
+
+.imgGallery{
+  display: flex;
+  gap: 2%;
+}
+.gallerYitems{
+  flex-basis: 23%;
+}
+.gallerYitems img{
+  width: 100%;
+}
