@@ -4,13 +4,13 @@ import React, { createContext, useEffect, useState } from 'react'
 export let countContext=createContext()
 export default function MainContext({children}) {
   let [count,setCount]=useState(0) 
-  
-  let [cart,setCart]=useState([])
+                                  //Json to Array
+  let [cart,setCart]=useState( JSON.parse(localStorage.getItem("CART")) ?? [] )
   
   let obj={count,setCount,cart,setCart}
 
   useEffect(()=>{
-      console.log(cart)
+     localStorage.setItem("CART",JSON.stringify(cart))  //Array to JSON
   },[cart])
   return (
     <countContext.Provider value={obj}>

@@ -52,7 +52,14 @@ function ProductCard({product}){
 
   let {cart,setCart}  =useContext(countContext);
 
+ 
   let {title,thumbnail,category,id,price}=product
+
+
+ let checkMyProductinCart=cart.filter((items)=>items.pid==id ) //[{}]
+  
+
+ 
 
   let addToCart=()=>{
     let obj={
@@ -67,6 +74,16 @@ function ProductCard({product}){
     setCart(cartOldData)
     toast.success("Your Item add in Cart...")
 
+  }
+
+  let removeCart=()=>{
+
+    if(confirm("Are you sure want to delete?")){
+      let filterData=cart.filter((items)=>items.pid!=id);
+
+      setCart(filterData)
+    }
+  
   }
 
   return(
@@ -86,7 +103,14 @@ function ProductCard({product}){
                   </h3>
                 
                   <p className="mt-1 text-sm text-gray-500">{category}</p>
-                  <button onClick={addToCart} className='bg-red-700 text-white p-3'>Add to Cart</button>
+                  {checkMyProductinCart.length==1
+                    ?
+                    <button onClick={removeCart} className='bg-red-700 text-white p-3'>RemoveCart</button>
+                    :
+                    <button onClick={addToCart} className='bg-green-700 text-white p-3'>Add to Cart</button>
+                  
+                  }
+                  
                 </div>
                 <p className="text-sm font-medium text-gray-900">{price}</p>
               </div>

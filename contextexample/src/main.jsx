@@ -31,9 +31,9 @@ let router=createBrowserRouter([
   }
 ])
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  
     <MainContext>
        <RouterProvider router={router}/>
     </MainContext>
-  </StrictMode>,
+  ,
 )
